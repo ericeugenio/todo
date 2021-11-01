@@ -19,10 +19,10 @@
                 <figure>
                     <img src="media/img/logo-todo-app.svg" alt="todo logo" width="100" height="100">
                 </figure>
-                <div class="sidenav-header-text"> 
-                    <h3>TODO++</h3>
-                    <p>x duties</p>
-                    <p>x urgent</p>
+                <div class="sidenav-header-data"> 
+                    <p class="sidenav-header-title">TODO++</p>
+                    <p class="sidenav-header-text">x duties</p>
+                    <p class="sidenav-header-text">x urgent</p>
                 </div>
             </div>
             <!-- Side navigation options -->
@@ -41,17 +41,15 @@
             <div class="todo-header">
                 <h1><span><img src="media/img/icons/calendar-day-solid.svg" class="icon" alt="calendar icon" width="24" height="24"></span>Today</h1>
                 <div class="todo-header-buttons">
-                    <button type="button">Select all</button>
-                    <button type="button"><img src="media/img/icons/check-solid.svg" alt="check icon" width="24" height="24"></button>
-                    <button type="button"><img src="media/img/icons/trash-solid.svg" alt="trash icon" width="24" height="24"></button>
-                    <div class="todo-header-buttons-search">
-                        <form name="header-search">
-                            <input type="search" name="header-search-query" placeholder="Search todo...">
-                            <button type="submit" name="header-search-submit">
-                                <img src="media/img/icons/search-solid.svg" alt="search icon" width="24" height="24">
-                            </button>
-                        </form>
-                    </div>
+                    <button type="button" class="todo-header-buttons-all">Select all</button>
+                    <button type="button" class="todo-header-buttons-mod"><img src="media/img/icons/check-solid.svg" alt="check icon" width="24" height="24"></button>
+                    <button type="button" class="todo-header-buttons-mod"><img src="media/img/icons/trash-solid.svg" alt="trash icon" width="24" height="24"></button>
+                    <form class="todo-header-search" name="header-search">
+                        <input type="search" class="form" name="header-search-query" placeholder="Search todo...">
+                        <button type="submit" class="todo-header-buttons-search" name="header-search-submit">
+                            <img src="media/img/icons/search-solid.svg" alt="search icon" width="24" height="24">
+                        </button>
+                    </form>
                 </div>
             </div>
             <!-- Todo's list -->
