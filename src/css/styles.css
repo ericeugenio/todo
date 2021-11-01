@@ -1,0 +1,146 @@
+:root {
+    /* colors */ 
+    --main-bg-color: rgb(241, 241, 241);
+    --btn-main-bg-color: rgb(98, 71, 170); 
+    --btn-sub-bg-color: rgb(170, 161, 200);
+    --btn-sub-bg-a-color: rgb(98, 71, 170);
+    --btn-sub-bg-d-color: rgb(198, 198, 198);
+
+    --text-main-color: black;
+    --text-sub-color: gray;
+    --active-color: white;
+
+    /* sizes */
+    --text-main-size: 24px;
+    --text-sub-size: 14px;
+    --component-height: 52px; 
+}
+
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+/* Split window in side navigation and main */
+
+.grid-parent {
+    display: grid;
+    grid-template-columns: 30vw 70vw;
+    grid-template-rows: 100vh;
+    grid-template-areas: "sidenav main";
+
+    background-color: var(--main-bg-color);
+}
+
+/* --------------------------- */
+/*           General           */
+/* --------------------------- */
+
+.icon {
+    fill: darkgray;
+    margin: 14px 14px 14px 0;
+}
+
+/* --------------------------- */
+/*       Side navigation       */
+/* --------------------------- */
+
+/* Side navigation header */
+
+.sidenav-wrapper {
+    grid-area: sidenav;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 24px;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.sidenav-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 24px 0 12px 0;
+}
+
+.sidenav-header figure {
+    margin: 0 12px 0 0;
+}
+.sidenav-header-text {
+    margin: 0 0 0 12px;
+}
+
+.sidenav-header-text h3 {
+    margin: 0;
+    color: var(--text-main-color);
+    font-size: var(--text-main-size);
+}
+
+.sidenav-header-text p {
+    margin: 0;
+    color: var(--text-sub-color);
+    font-size: var(--text-sub-size);
+}
+
+/* Side navigation options */
+
+.sidenav-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 100%;
+    margin: 12px 0 24px 0;
+}
+
+.sidenav-options button {
+    align-self: center;
+
+    width: calc(100% - 48px);
+    height: var(--component-height);
+    border-style: hidden;
+    border-radius: 12px;
+    margin-bottom: 12px;
+
+    font-size: var(--text-main-size);
+    color: var(--active-color);
+    background-color: var(--btn-main-bg-color);
+}
+
+.sidenav-options ul {
+    list-style-type: none;
+    margin: 12px 0 0 24px;
+    padding: 0;
+}
+
+.sidenav-options li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* --------------------------- */
+/*            Main             */
+/* --------------------------- */
+
+.todo-wrapper {
+    grid-area: main;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 24px;
+}
+

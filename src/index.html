@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <title>Main View</title>
+</head>
+<body>
+    <main class="grid-parent">
+        <!-- Side navigation -->
+        <aside class="sidenav-wrapper">                 
+            <!-- Side navigation header -->
+            <div class="sidenav-header">
+                <figure>
+                    <img src="media/img/logo-todo-app.svg" alt="todo logo" width="100" height="100">
+                </figure>
+                <div class="sidenav-header-text"> 
+                    <h3>TODO++</h3>
+                    <p>x duties</p>
+                    <p>x urgent</p>
+                </div>
+            </div>
+            <!-- Side navigation options -->
+            <nav class="sidenav-options">
+                <button type="button" class="btn-main">Add TODO</button>    
+                <ul>
+                    <li><span><img src="media/img/icons/calendar-day-solid.svg" class="icon" alt="calendar icon" width="24" height="24"></span>Today</li>
+                    <li><span><img src="media/img/icons/list-solid.svg" class="icon" alt="duties icon" width="24" height="24"></span>All duties</li>
+                    <li><span><img src="media/img/icons/shapes-solid.svg" class="icon" alt="categories icon" width="24" height="24"></span>Categories</li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- Todo's -->
+        <section class="todo-wrapper">
+            <!-- Todo's header -->
+            <div class="todo-header">
+                <h1><span><img src="media/img/icons/calendar-day-solid.svg" class="icon" alt="calendar icon" width="24" height="24"></span>Today</h1>
+                <div class="todo-header-buttons">
+                    <button type="button">Select all</button>
+                    <button type="button"><img src="media/img/icons/check-solid.svg" alt="check icon" width="24" height="24"></button>
+                    <button type="button"><img src="media/img/icons/trash-solid.svg" alt="trash icon" width="24" height="24"></button>
+                    <div class="todo-header-buttons-search">
+                        <form name="header-search">
+                            <input type="search" name="header-search-query" placeholder="Search todo...">
+                            <button type="submit" name="header-search-submit">
+                                <img src="media/img/icons/search-solid.svg" alt="search icon" width="24" height="24">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Todo's list -->
+            <div class="todo-list">
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
