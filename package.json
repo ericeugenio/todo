@@ -1,0 +1,22 @@
+{
+  "name": "todo-web-app",
+  "version": "0.0.1",
+  "description": "todo web app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericeugenio/todo.git"
+  },
+  "author": "Jose Loucel, Josep Segarra, Eric Eugenio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericeugenio/todo/issues"
+  },
+  "homepage": "https://github.com/ericeugenio/todo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

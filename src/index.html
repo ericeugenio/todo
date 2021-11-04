@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/pages/index-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
     <title>Main View</title>
 </head>
 <body>
+    <script type="module" src="js/pages/index.js"></script>
+
     <main class="grid-parent">
         <!-- Side navigation -->
         <aside class="sidenav-wrapper">                 
@@ -21,17 +23,16 @@
                 </figure>
                 <div class="sidenav-header-data"> 
                     <p class="sidenav-header-title">TODO++</p>
-                    <p class="sidenav-header-text">x duties</p>
-                    <p class="sidenav-header-text">x urgent</p>
+                    <todo-status></todo-status>
                 </div>
             </div>
             <!-- Side navigation options -->
             <nav class="sidenav-options">
                 <button type="button" class="btn-main">Add TODO</button>    
                 <ul>
-                    <li><span><img src="media/img/icons/calendar-day-solid.svg" class="icon" alt="calendar icon" width="24" height="24"></span>Today</li>
-                    <li><span><img src="media/img/icons/list-solid.svg" class="icon" alt="duties icon" width="24" height="24"></span>All duties</li>
-                    <li><span><img src="media/img/icons/shapes-solid.svg" class="icon" alt="categories icon" width="24" height="24"></span>Categories</li>
+                    <li id="nav-today"><span><img src="media/img/icons/calendar-day-solid.svg" class="icon" alt="calendar icon" width="24" height="24"></span>Today</li>
+                    <li id="nav-all"><span><img src="media/img/icons/list-solid.svg" class="icon" alt="duties icon" width="24" height="24"></span>All duties</li>
+                    <li id="nav-categories"><span><img src="media/img/icons/shapes-solid.svg" class="icon" alt="categories icon" width="24" height="24"></span>Categories</li>
                 </ul>
             </nav>
         </aside>
@@ -44,12 +45,7 @@
                     <button type="button" class="todo-header-buttons-all">Select all</button>
                     <button type="button" class="todo-header-buttons-mod"><img src="media/img/icons/check-solid.svg" alt="check icon" width="24" height="24"></button>
                     <button type="button" class="todo-header-buttons-mod"><img src="media/img/icons/trash-solid.svg" alt="trash icon" width="24" height="24"></button>
-                    <form class="todo-header-search" name="header-search">
-                        <input type="search" class="form" name="header-search-query" placeholder="Search todo...">
-                        <button type="submit" class="todo-header-buttons-search" name="header-search-submit">
-                            <img src="media/img/icons/search-solid.svg" alt="search icon" width="24" height="24">
-                        </button>
-                    </form>
+                    <search-engine class="todo-header-search"></search-engine>
                 </div>
             </div>
             <!-- Todo's list -->
