@@ -1,0 +1,42 @@
+:root {
+    /* colors */ 
+    --main-bg-color: rgb(241, 241, 241);
+    --btn-bg-color: rgb(170, 161, 200); 
+    --btn-hv-bg-color: rgb(125, 116, 155);
+    --btn-ac-bg-color: rgb(139, 116, 216); 
+    --input-bg-color: rgba(170, 161, 200, 0.25);
+
+    --text-main-color: black;
+    --text-foc-color: rgb(98, 71, 170);
+    --text-ac-color: white;
+    --text-err-color: red;
+
+    /* sizes */
+    --text-size: 24px;
+    --component-height: 52px; 
+}
+
+body {
+    margin: 0px;
+
+    font-size: var(--text-size);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+/* Align window in center */
+
+.grid-parent {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 100%;
+    grid-template-areas: "empty-l form empty-r";
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.form {
+    grid-area: form;
+}

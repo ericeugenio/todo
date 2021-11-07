@@ -40,13 +40,6 @@ body {
     margin: 0 12px 0 0;
 }
 
-input {
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-}
-
 /* --------------------------- */
 /*       Side navigation       */
 /* --------------------------- */
@@ -103,7 +96,7 @@ input {
     margin: 12px 0 24px 0;
 }
 
-.sidenav-options button {
+.sidenav-options a {
     align-self: center;
 
     cursor: pointer;
@@ -113,13 +106,16 @@ input {
     border-radius: 12px;
     margin: 12px 0;
 
+    line-height: var(--component-height);
+    text-align: center;
+    text-decoration: none;
     font-weight: bold;
     font-size: var(--text-main-size);
     color: var(--active-color);
     background-color: var(--btn-main-bg-color);
 }
 
-.sidenav-options button:hover {
+.sidenav-options a:hover {
     border-style: hidden;
     background-color: rgb(70, 43, 144);
 }
@@ -151,7 +147,7 @@ input {
 /*            Main             */
 /* --------------------------- */
 
-.todo-wrapper {
+.todo-list-wrapper {
     grid-area: main;
 
     display: flex;
@@ -171,7 +167,7 @@ input {
     align-items: flex-start;
 
     width: 100%;
-    margin: 24px 0 12px 0;
+    margin: 24px 0;
 }
 
 .todo-header h1 {
@@ -204,7 +200,7 @@ input {
 }
 
 .todo-header-buttons-all {
-    padding: 0 24px;
+    padding: 0 48px;
     margin-right: 48px;
 
     font-weight: bold;
@@ -221,8 +217,116 @@ input {
 }
 
 /* Main header search engine */
+
 .todo-header-search {
     margin-left: auto;
 }
 
 /* Main list */
+
+/* Todo */
+
+.todo-wrapper {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 100%;
+    grid-template-areas: "check data";
+
+    width: 100%;
+    margin-top: 24px;
+
+    background-color: var(--main-bg-color);
+}
+
+/* Todo check */
+
+.todo-check {
+    grid-area: check;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 24px 0 0;
+    border-radius: 12px;
+
+    background-color: white;
+    filter: drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.1));
+}
+
+.todo-check input {
+    transform: scale(3);
+}
+
+/* Todo data */
+
+.todo-data {
+    grid-area: data;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-radius: 12px;
+    padding: 12px 24px;
+
+    background-color: white;
+    filter: drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.1));
+}
+
+.todo-data img {
+    margin-right: 24px;
+}
+
+/* Todo data left (name and description) */
+
+.todo-data-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.todo-data-name {
+    margin: 0 0 6px 0;
+
+    font-size: 24px;
+    color: black;
+}
+
+.todo-data-description {
+    margin: 6px 0 0 0;
+
+    font-size: 14px;
+    color: var(--text-sub-color);
+}
+
+/* Todo data right (date and category) */
+
+.todo-data-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin-left: auto;
+}
+
+.todo-data-date {
+    width: 100%;
+    margin: 0 0 12px 0;
+
+    text-align: right;
+    font-size: 14px;
+    color: black;
+}
+
+.todo-data-category {
+    width: 100%;
+    margin: 12px 0 0 0;
+
+    text-align: right;
+    font-size: 14px;
+    color: black;
+}

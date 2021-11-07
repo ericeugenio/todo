@@ -1,5 +1,6 @@
-import TodoStatus from "../components/todo-status.js";
+import TasksStatus from "../components/tasks-status.js";
 import SearchEngine from "../components/search-engine.js";
 
-window.customElements.define("todo-status", TodoStatus);
+/* init web components */
+window.customElements.define("tasks-status", TasksStatus);
 window.customElements.define("search-engine", SearchEngine);
