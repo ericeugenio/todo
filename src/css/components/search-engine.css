@@ -8,7 +8,7 @@
     padding: 0 24px;
     border-radius: 12px;
 
-    background-color: rgb(171, 162, 200);
+    background-color: var(--search-bg);
 }
 
 .search-container input {
@@ -24,6 +24,5 @@
 
 .search-container button {
     border: none;
-
-    background-color: rgb(171, 162, 200);
+    background: none;
 }

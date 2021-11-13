@@ -21,48 +21,48 @@
 
             <form class="form-wrapper" >
                 <div class="form-line form-row">
-                    <img class="selected-image" src="media/img/logo-todo-app.svg" alt="selected image" width="120" height="120">
+                    <img src="media/img/default1.png" id="selected" class="selected-image" alt="selected image" width="120" height="120">
                     <div class="default-images">
-                        <img src="media/img/icons/calendar-day-solid.svg" alt="default image 1" width="50" height="50" class="img">
-                        <img src="media/img/icons/check-solid.svg" alt="default image 2" width="50" height="50" class="img">
-                        <img src="media/img/icons/list-solid.svg" alt="default image 3" width="50" height="50" class="img">
-                        <img src="media/img/icons/search-solid.svg" alt="default image 4" width="50" height="50" class="img">
-                        <img src="media/img/icons/shapes-solid.svg" alt="default image 5" width="50" height="50" class="img">
-                        <img src="media/img/icons/trash-solid.svg" alt="default image 6" width="50" height="50" class="img">
+                        <img src="media/img/default1.png" id="default1" alt="default image 1" width="50" height="50" class="img">
+                        <img src="media/img/default2.png" id="default2" alt="default image 2" width="50" height="50" class="img">
+                        <img src="media/img/default3.png" id="default3" alt="default image 3" width="50" height="50" class="img">
+                        <img src="media/img/default4.png" id="default4" alt="default image 4" width="50" height="50" class="img">
+                        <img src="media/img/default5.png" id="default5" alt="default image 5" width="50" height="50" class="img">
+                        <img src="media/img/default6.png" id="default6" alt="default image 6" width="50" height="50" class="img">
                     </div>
                 </div>
                 <div class="form-head">
                     <div class="title">
-                        <input type="text" id="title" name="title">
+                        <input type="text" id="title" name="title" maxlength="100">
                         <label for="title">Title</label>
                     </div>    
                     <div class="deadline">
-                        <input type="text" id="deadline" name="deadline">
+                        <input type="date" id="deadline" name="deadline">
                         <label for="deadline">Deadline</label>
                     </div>                  
                 </div>
                 <div class="form-line form-column">
-                    <select id="category" name="category">
-                        <option selected disabled hidden>Select category</option>
-                        <option value="Development">Development</option>
-                        <option value="Miscellaneous">Miscellaneous</option>
-                        <option value="Projects">Projects</option>                        
+                    <select id="category" name="category" id="category">
+                        <option selected disabled hidden value="default">Select category</option>
+                        <option value="development">Development</option>
+                        <option value="miscellaneous">Miscellaneous</option>
+                        <option value="projects">Projects</option>                        
                     </select>
                     <label for="category">Category</label>
                 </div>
                 <div class="form-line form-column">
-                    <textarea type="text" class="form-description" id="description" name="description"></textarea>
+                    <textarea type="text" class="form-description" id="description" name="description" maxlength="1000"></textarea>
                     <label for="description">Description</label>
                 </div>     
-                <p class="form-error"></p>  
+                <p class="form-error" id="error"></p>  
                 <div class="form-tail">
                     <div class="completed">
-                        <label for="completed">Completed</label>
                         <input type="checkbox" id="completed" name="Completed">
+                        <label for="completed">Completed</label>
                     </div>
                     <div class="buttons">
-                        <button type="button">Cancel</button>
-                        <button type="button">Accept</button>
+                        <button type="button" id="cancel">Cancel</button>
+                        <button type="button" id="accept">Accept</button>
                     </div>                    
                 </div>       
             </form>

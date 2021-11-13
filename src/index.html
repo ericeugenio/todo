@@ -21,48 +21,57 @@
                 <figure>
                     <img src="media/img/logo-todo-app.svg" alt="todo logo" width="100" height="100">
                 </figure>
-                <div class="sidenav-header-data"> 
+                <div id="sidenav-header" class="sidenav-header-data"> 
                     <p class="sidenav-header-title">TODO++</p>
-                    <tasks-status></tasks-status>
                 </div>
             </div>
             <!-- Side navigation options -->
             <nav class="sidenav-options">
                 <a href="form.html" >Add TODO</a>    
                 <ul>
-                    <li id="nav-today"><span><img src="media/img/icons/calendar-day-solid.svg" class="icon" alt="calendar icon" width="24" height="24"></span>Today</li>
+                    <li id="nav-today"><span><img src="media/img/icons/calendar-day-solid.svg" id="ic1" class="icon" alt="calendar icon" width="24" height="24"></span>Today</li>
                     <li id="nav-all"><span><img src="media/img/icons/list-solid.svg" class="icon" alt="duties icon" width="24" height="24"></span>All duties</li>
                     <li id="nav-categories"><span><img src="media/img/icons/shapes-solid.svg" class="icon" alt="categories icon" width="24" height="24"></span>Categories</li>
                 </ul>
             </nav>
         </aside>
         <!-- Todo's -->
-        <section class="todo-list-wrapper">
+        <section id="main" class="main-wrapper">
             <!-- Todo's header -->
-            <div class="todo-header">
-                <h1><span><img src="media/img/icons/calendar-day-solid.svg" class="icon" alt="calendar icon" width="24" height="24"></span>Today</h1>
-                <div class="todo-header-buttons">
-                    <button type="button" class="todo-header-buttons-all">Select all</button>
-                    <button type="button" class="todo-header-buttons-mod"><img src="media/img/icons/check-solid.svg" alt="check icon" width="24" height="24"></button>
-                    <button type="button" class="todo-header-buttons-mod"><img src="media/img/icons/trash-solid.svg" alt="trash icon" width="24" height="24"></button>
-                    <search-engine class="todo-header-search"></search-engine>
+            <div class="main-header">
+                <div class="main-header-data">
+                    <img src="media/img/icons/calendar-day-solid.svg" id="main-icon" class="icon" alt="calendar icon" width="24" height="24">
+                    <h1 id="main-title">Today</h1>
                 </div>
             </div>
             <!-- Todo's list -->
-            <div class="todo-wrapper">
-                <div class="todo-check" ><input type="checkbox"></div>
-                <div class="todo-data">
-                    <img src="media/img/logo-todo-app.svg" width="64" height="64"></img>
-                    <div class="todo-data-left">
-                        <p class="todo-data-name">Title</p>
-                        <p class="todo-data-description">Description</p>
-                    </div>
-                    <div class="todo-data-right">
-                        <p class="todo-data-date"><b>Date</b></p>
-                        <p class="todo-data-category">Category</p>
+            <template id="tasks-list">
+                <link rel="stylesheet" type="text/css" href="../../css/components/tasks-list.css">
+    
+                <div class="tasks-list-buttons">
+                    <button type="button" id="select-all" class="buttons-all">Select all</button>
+                    <button type="button" id="completed" class="buttons-mod"><img src="media/img/icons/check-solid.svg" alt="check icon" width="24" height="24"></button>
+                    <button type="button" id="delete" class="buttons-mod"><img src="media/img/icons/trash-solid.svg" alt="trash icon" width="24" height="24"></button>
+                    <search-engine class="search-engine"></search-engine>
+                </div>
+                <div id="list-wrapper" class="list-wrapper"></div>
+            </template>
+            <template id="task-template">
+                <div class="todo-wrapper" id="todo-wrapper">
+                    <div class="todo-check" id="todo-check"><input type="checkbox" id="check"></div>
+                    <div class="todo-data" id="todo-data">
+                        <img src="#" id="image" width="64" height="64"></img>
+                        <div class="todo-data-left">
+                            <p id="title" class="todo-data-name"></p>
+                            <p id="description" class="todo-data-description"></p>
+                        </div>
+                        <div class="todo-data-right">
+                            <p id="deadline" class="todo-data-date"></p>
+                            <p id="category" class="todo-data-category"></p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </template>
         </section>
     </main>
 </body>

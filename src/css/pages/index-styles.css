@@ -2,10 +2,11 @@
     /* colors */ 
     --main-bg-color: rgb(241, 241, 241);
     --btn-main-bg-color: rgb(98, 71, 170); 
-    --btn-sub-bg-color: rgb(171, 162, 200);
-    --btn-sub-bg-a-color: rgb(98, 71, 170);
+    --btn-sub-bg-color: rgb(170, 161, 200); 
+    --btn-sub-bg-a-color: rgb(139, 116, 216); 
     --btn-sub-bg-d-color: rgb(198, 198, 198);
-
+    --search-bg: rgba(171, 162, 200, 0.25);
+ 
     --text-main-color: black;
     --text-sub-color: gray;
     --active-color: white;
@@ -115,11 +116,6 @@ body {
     background-color: var(--btn-main-bg-color);
 }
 
-.sidenav-options a:hover {
-    border-style: hidden;
-    background-color: rgb(70, 43, 144);
-}
-
 .sidenav-options ul {
     list-style-type: none;
 
@@ -147,7 +143,7 @@ body {
 /*            Main             */
 /* --------------------------- */
 
-.todo-list-wrapper {
+.main-wrapper {
     grid-area: main;
 
     display: flex;
@@ -155,178 +151,46 @@ body {
     justify-content: flex-start;
     align-items: center;
 
-    margin: 128px 64px;
+    margin: 128px 32px;
 }
 
 /* Main header */
 
-.todo-header {
+.main-header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 
+    box-sizing: border-box;
+
     width: 100%;
-    margin: 24px 0;
+    padding: 0 32px;
 }
 
-.todo-header h1 {
+.main-header-data {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
 
-    margin: 0 0 12px 0;
+    margin-bottom: 12px;
+}
 
+.main-header h1 {
+    margin: 0;
     font-size: 36px;
-}
-
-/* Main header buttons */
-
-.todo-header-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-
-    width: 100%;
-    margin-top: 12px;
-}
-
-.todo-header-buttons button {
-    cursor: pointer;
-    height: var(--component-height);
-    border-style: hidden;
-    border-radius: 12px;
-}
-
-.todo-header-buttons-all {
-    padding: 0 48px;
-    margin-right: 48px;
-
-    font-weight: bold;
-    font-size: var(--text-main-size);
-    color: var(--text-main-color);
-    background-color: var(--btn-sub-bg-color);
-}
-
-.todo-header-buttons-mod {
-    padding: 0 12px;
-    margin-right: 12px;
-
-    background-color: var(--btn-sub-bg-d-color);
 }
 
 /* Main header search engine */
 
-.todo-header-search {
+.search-component {
     margin-left: auto;
 }
 
-/* Main list */
+/* List */
 
-/* Todo */
-
-.todo-wrapper {
-    display: grid;
-    grid-template-columns: 20% auto;
-    grid-template-rows: 100%;
-    grid-template-areas: "check data";
-
+.list-component {
     width: 100%;
-    margin-top: 24px;
-
-    background-color: var(--main-bg-color);
-}
-
-/* Todo check */
-
-.todo-check {
-    grid-area: check;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin: 0 24px 0 0;
-    border-radius: 12px;
-
-    background-color: white;
-    filter: drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.1));
-}
-
-.todo-check input {
-    transform: scale(3);
-}
-
-/* Todo data */
-
-.todo-data {
-    grid-area: data;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
-    border-radius: 12px;
-    padding: 12px 24px;
-
-    background-color: white;
-    filter: drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.1));
-}
-
-.todo-data img {
-    margin-right: 24px;
-}
-
-/* Todo data left (name and description) */
-
-.todo-data-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.todo-data-name {
-    margin: 0 0 6px 0;
-
-    font-size: 24px;
-    color: black;
-}
-
-.todo-data-description {
-    margin: 6px 0 0 0;
-
-    font-size: 14px;
-    color: var(--text-sub-color);
-}
-
-/* Todo data right (date and category) */
-
-.todo-data-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-    margin-left: auto;
-}
-
-.todo-data-date {
-    width: 100%;
-    margin: 0 0 12px 0;
-
-    text-align: right;
-    font-size: 14px;
-    color: black;
-}
-
-.todo-data-category {
-    width: 100%;
-    margin: 12px 0 0 0;
-
-    text-align: right;
-    font-size: 14px;
-    color: black;
+    height: 100%;
 }
